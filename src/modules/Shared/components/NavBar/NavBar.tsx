@@ -72,7 +72,7 @@ export default function NavBar() {
                   height: "50px",
                   borderRadius: "50%",
                   backgroundColor: "var(--blue-color)",
-                  backgroundImage: "url('src/assets/logo.png')",
+                  backgroundImage: "url(src/assets/logo.png)",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   border: "0.1rem solid #3f2b8c",
