@@ -1,0 +1,42 @@
+#NewRelease {
+  /* تنسيق الـ pagination */
+  .swiper-pagination {
+    /* position: absolute !important; */
+    bottom: 10px;
+    left: 50%; /* ضع الـ pagination في المنتصف */
+    transform: translateX(-50%); /* لضمان التوسيط الأفقي */
+    width: auto !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* استايل النقاط */
+  .swiper-pagination-bullet {
+    width: 10px !important;
+    height: 10px !important;
+    background-color: #bebebe !important;
+    opacity: 1 !important;
+    margin: 0 0.5rem !important;
+  }
+
+  /* استايل النقطة النشطة */
+  .swiper-pagination-bullet-active {
+    background-color: #ff5733 !important;
+    border: 2px solid #ff5733 !important;
+    margin: 0 1.3rem !important;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-pagination-bullet-active::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #ff5733;
+  }
+}

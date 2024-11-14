@@ -1,0 +1,21 @@
+.tabs-nav p {
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "Inter";
+  cursor: pointer;
+}
+.tabs-nav p a{
+  color: black;
+}
+.tabs-nav p:hover {
+  color: #ed553b;
+}
+.tabs-nav hr {
+  background-color: black;
+}
+.Nav-icons hr {
+  background-color: black;
+}
+#navbar a {
+  text-decoration: none;
+}

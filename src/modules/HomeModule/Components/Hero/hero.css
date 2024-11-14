@@ -1,0 +1,78 @@
+#hero {
+  .custom-swiper .swiper-button-next-custom,
+  .custom-swiper .swiper-button-prev-custom {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border: 2px solid #ff5733;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .custom-swiper .swiper-button-next-custom {
+    right: 10px;
+  }
+
+  .custom-swiper .swiper-button-prev-custom {
+    left: 10px;
+  }
+
+  /* ============================================ */
+  /* تنسيق الـ pagination */
+
+  .swiper-pagination-bullet {
+    width: 10px !important;
+    height: 10px !important;
+    background-color: #bebebe !important;
+    opacity: 1 !important;
+    /* border: 2px solid #ff5733; */
+    /* box-shadow: 0 0 0 2px white; */
+    margin: 0 5px !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #ff5733 !important;
+    border: 2px solid #ff5733 !important;
+    margin: 0 20px !important;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 1px solid #ff5733;
+      /* transform: translate(-15px, -12px); */
+    }
+  }
+
+  /* pc vic */
+  .swiper-pagination {
+    position: absolute !important;
+    bottom: 2rem !important;
+    left: 150px !important;
+    width: auto !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Mobile viwe*/
+  @media (max-width: 767px) {
+    .swiper-pagination {
+      bottom: 20px !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+    }
+  }
+}
