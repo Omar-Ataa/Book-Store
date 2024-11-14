@@ -6,7 +6,7 @@ import {
   Container,
   Divider,
   ListItemText,
-  ListItem,
+  ListItemButton,  // استخدمنا ListItemButton بدلاً من ListItem
   List,
   Drawer,
   Badge,
@@ -30,7 +30,7 @@ export default function NavBar() {
 
   let navigate = useNavigate();
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const toggleDrawer = (open: any) => (event: any) => {
+  const toggleDrawer = (open: boolean) => (event: any) => {
     if (
       event.type === "keydown" &&
       (event.key === "Tab" || event.key === "Shift")
@@ -145,28 +145,21 @@ export default function NavBar() {
                       onKeyDown={toggleDrawer(false)}
                     >
                       <List>
-                        {[
-                          { text: "Home", path: "/dashboard/home" },
+                        {[{ text: "Home", path: "/dashboard/home" }, 
                           { text: "Books", path: "/dashboard/books" },
-                          {
-                            text: "New Release",
-                            path: "/dashboard/new-release",
-                          },
+                          { text: "New Release", path: "/dashboard/new-release" }
                         ].map((item) => (
-                          <ListItem
-                            button
+                          <ListItemButton
                             key={item.text}
+                            component={Link} // هنا استخدمنا component={Link}
+                            to={item.path} // استخدمنا to بدلاً من onClick
                             sx={{ textAlign: "center" }}
-                            onClick={() => {
-                              setDrawerOpen(false);
-                              navigate(item.path);
-                            }}
                           >
                             <ListItemText
                               primary={item.text}
                               className="navbarItem"
                             />
-                          </ListItem>
+                          </ListItemButton>
                         ))}
                         <Divider />
                         <Box
